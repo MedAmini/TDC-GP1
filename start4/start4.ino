@@ -406,7 +406,7 @@ void loop() {
     
     
     Prep_To_Read();
-    Choose_Address(0,0,0,0);
+    //Choose_Address(0,0,0,0);
     Serial.println("Reading result register 0 strobe 2");
     digitalWrite(To_Read, LOW); //low active 
     delayMicroseconds(1);
@@ -419,7 +419,7 @@ void loop() {
     
     
     Prep_To_Read();
-    Choose_Address(0,0,0,0);
+    //Choose_Address(0,0,0,0);
     Serial.println("Reading result register 1 strobe 1");
     digitalWrite(To_Read, LOW); //low active 
     delayMicroseconds(1);
@@ -432,7 +432,7 @@ void loop() {
     
     
     Prep_To_Read();
-    Choose_Address(0,0,0,0);
+    //Choose_Address(0,0,0,0);
     Serial.println("Reading result register 1 strobe 2");
     digitalWrite(To_Read, LOW); //low active 
     delayMicroseconds(1);
