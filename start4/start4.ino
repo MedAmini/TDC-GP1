@@ -472,6 +472,7 @@ void loop() {
  
     delay(3000);
     // Configuration();
+    //First_configuration();
     }
     else
     {
@@ -479,6 +480,7 @@ void loop() {
        delay(1000);
        Init_byte();
      // Configuration();
+     //First_configuration();
     }
     
   //  } 
