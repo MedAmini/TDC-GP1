@@ -3,8 +3,8 @@ int To_Read = 38;
 int To_Write = 39;
 int Chip_sel = 51;
 int Enable_Stop1= 53;
- int interrupt_pin = 43;
-//volatile int state = LOW;
+int interrupt_pin = 43;
+volatile int state = LOW;
 
 //address
 int add_0 = 22;
@@ -135,14 +135,14 @@ int To_integer()
       return result;
     }
     
-//     //the interrupt
-//      void catch_it() 
-//      {
-//        state = !state;
-//      }
+     //the interrupt
+      void catch_it() 
+      {
+        state = !state;
+      }
 
 void setup() {
-//  attachInterrupt(digitalPinToInterrupt(interrupt_pin), catch_it, RISING);
+  attachInterrupt(digitalPinToInterrupt(interrupt_pin), catch_it, RISING);
   Serial.begin(9600);
   
   pinMode(To_Read,OUTPUT);
@@ -351,14 +351,14 @@ void loop() {
 //      delayMicroseconds(1);
   
    
-      valid =0;
-      while (valid==0)
-      {
-        valid = digitalRead(interrupt_pin);
-      }
+//      valid =0;
+//      while (valid==0)
+//      {
+//        valid = digitalRead(interrupt_pin);
+//      }
        
-//     if(state == HIGH)
-//      {   
+     if(state == HIGH)
+      {   
            
     delayMicroseconds(1);// 3ns  time, the ALU needs for calculation
     
@@ -470,7 +470,7 @@ void loop() {
     //Serial.println("result = %6.3fns\n",final_result); 
     Serial.println("-----------------------------------------------"); 
  
-    delay(3000);
+    delay(2000);
     // Configuration();
     //First_configuration();
     }
@@ -483,7 +483,7 @@ void loop() {
      //First_configuration();
     }
     
-  //  } 
+  } 
 }//end loop
 
 
