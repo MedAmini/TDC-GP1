@@ -168,68 +168,71 @@ void setup() {
 
 
 // configuration
-    Configuration();
+//    Configuration();
+    First_configuration();
   
 
-//
-//    // REG 7 : Disable inputs while writing to control register
-//    Prep_To_Write();
-//    Serial.println("initialization of control registers ...");
-//    Choose_Address(0,1,1,1); //7
-//    Serial.println("setting REG 7");
-//    Write_To_Register(0,0,0,0,0,0,0,0);
-//    digitalWrite(To_Write, LOW); // write is activated here
-//    delayMicroseconds(1);
-//    Finish_Write();
-//    Reset_Address_data();
-//    
-//
-//    // REG 0 CALIBRATE - MULTIPLY
-//    Prep_To_Write();
-//    Choose_Address(0,0,0,0);
-//    Serial.println("setting REG 0");
-//    Write_To_Register(0,1,1,0,0,0,0,0);
-//    digitalWrite(To_Write, LOW); // write is activated here
-//    delayMicroseconds(1);
-//    Finish_Write();
-//    Reset_Address_data();
-//    
-//    // REG 2 Calculate Stop1 and Start 
-//    Prep_To_Write();
-//    Choose_Address(0,0,1,0);
-//    Serial.println("setting REG 2");
-//    Write_To_Register(0,0,0,0,0,0,0,1);
-//    digitalWrite(To_Write, LOW); // write is activated here
-//    delayMicroseconds(1);
-//    Finish_Write();
-//    Reset_Address_data();
-//       
-//     // REG 6 RETRIG_EN
-//    Prep_To_Write();
-//    Choose_Address(0,1,1,0);
-//    Serial.println("setting REG 6");
-//    Write_To_Register(0,0,1,0,0,0,0,1); 
-//    digitalWrite(To_Write, LOW); // write is activated here
-//    delayMicroseconds(1);
-//    Finish_Write();
-//    Reset_Address_data(); 
-//       
-//    // REG 7
-//    Prep_To_Write();
-//    Choose_Address(0,1,1,1);
-//    Serial.println("setting REG 7");
-//    Write_To_Register(0,0,0,0,0,0,1,0); 
-//    digitalWrite(To_Write, LOW); // write is activated here
-//    delayMicroseconds(1);
-//    Finish_Write();
-//    Reset_Address_data();   
+
+}
+void First_configuration()
+{
+    // REG 7 : Disable inputs while writing to control register
+    Prep_To_Write();
+    Serial.println("initialization of control registers ...");
+    Choose_Address(0,1,1,1); //7
+    Serial.println("setting REG 7");
+    Write_To_Register(0,0,0,0,0,0,0,0);
+    digitalWrite(To_Write, LOW); // write is activated here
+    delayMicroseconds(1);
+    Finish_Write();
+    Reset_Address_data();
+    
+
+    // REG 0 CALIBRATE - MULTIPLY
+    Prep_To_Write();
+    Choose_Address(0,0,0,0);
+    Serial.println("setting REG 0");
+    Write_To_Register(0,1,1,0,0,0,0,0);
+    digitalWrite(To_Write, LOW); // write is activated here
+    delayMicroseconds(1);
+    Finish_Write();
+    Reset_Address_data();
+    
+    // REG 2 Calculate Stop1 and Start 
+    Prep_To_Write();
+    Choose_Address(0,0,1,0);
+    Serial.println("setting REG 2");
+    Write_To_Register(0,0,0,0,0,0,0,1);
+    digitalWrite(To_Write, LOW); // write is activated here
+    delayMicroseconds(1);
+    Finish_Write();
+    Reset_Address_data();
+       
+     // REG 6 RETRIG_EN
+    Prep_To_Write();
+    Choose_Address(0,1,1,0);
+    Serial.println("setting REG 6");
+    Write_To_Register(0,0,1,0,0,0,0,1); 
+    digitalWrite(To_Write, LOW); // write is activated here
+    delayMicroseconds(1);
+    Finish_Write();
+    Reset_Address_data(); 
+       
+    // REG 7
+    Prep_To_Write();
+    Choose_Address(0,1,1,1);
+    Serial.println("setting REG 7");
+    Write_To_Register(0,0,0,0,0,0,1,0); 
+    digitalWrite(To_Write, LOW); // write is activated here
+    delayMicroseconds(1);
+    Finish_Write();
+    Reset_Address_data();   
        
     Serial.println("setting finnished"); 
    // digitalWrite(Start, LOW);
    // digitalWrite(Stop, LOW);
    // digitalWrite(Stop, HIGH);
 }
-
 void Configuration()
 {
       // REG 11
@@ -468,14 +471,14 @@ void loop() {
     Serial.println("-----------------------------------------------"); 
  
     delay(3000);
-     Configuration();
+    // Configuration();
     }
     else
     {
        Serial.println("OVERFLOW :-( DISTANCE BIGGER THAN 2280 METTERS ");
        delay(1000);
        Init_byte();
-      Configuration();
+     // Configuration();
     }
     
   //  } 
